@@ -1,3 +1,6 @@
+<!-- Hi guys so my  phone spoilt and i have to keep coding 
+/so i had to get a mifi just use to code for main time 
+till i get home cause i usally use my phone hotspot fot internet -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,14 +12,14 @@
 </head>
 <body>
     <div class="container">
-    
+    <!------------------------ Start Screen -------------------------------->
     <div class="screen active" id="start-screen">
         <h1>Quiz Time!</h1>
         <p>Test your knowledge with these fun questions</p>
         <button id="start-btn">Start Quiz</button>
 
     </div>
-
+    <!------------------------ Quiz Screen -------------------------------->
         <div class="screen" id="quiz-screen">
             <div class="quiz-header">
                 <h2 id="question-text">Question goes here</h2>
@@ -34,7 +37,7 @@
             <div id="answers-container" class="answer-container">
 
                 <!-- Answer buttons will be dynamically added here -->
-              
+
             </div>
 
             <div class="progress-bar">
@@ -43,6 +46,20 @@
 
 
         </div>
+        <!------------------------ Result Screen -------------------------------->
+        <div id="result-screen" class="screen"> 
+            <h1>Quiz Results</h1>
+            <div class="result-info">
+                <p>you scored <span id="final-score">0</span> out of <span id="max-score">5</span></p>
+            </div>
+            <div id="result-message">
+            <p>Keep Studying! You'll get better!</p>
+            </div>
+
+            <button id="restart-btn">Restart Quiz</button>
+        </div>
+
+
 
     </div>
     
