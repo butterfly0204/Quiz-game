@@ -28,8 +28,29 @@ body{
 }
 
 
-/* Basic Reset*/
-/* Basic Reset*/
+/* Screens*/
+.screen{
+    display: none;
+    padding: 2rem;
+    text-align: center;
+
+}
+
+.screen.active{
+    display: block;
+}
+
+
+/* Start Screen*/
+.screen.active h1{
+    color: rgb(129, 4, 98);
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+
+
+
 /* Basic Reset*/
 /* Basic Reset*/
 /* Basic Reset*/
