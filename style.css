@@ -8,7 +8,7 @@
 body{
     background: #f5efe6;
     display: flex;
-    justify-content: center;
+    justify-content: cen ter;
     align-items: center;
     min-height: 100vh;
     font-family: 'Arial', sans-serif;
@@ -42,8 +42,8 @@ body{
 
 
 /* Start Screen*/
-.screen.active h1{
-    color: rgb(129, 4, 98);
+#start-screen h1{
+    color: #e86a33;
     margin-bottom: 20px;
     font-size: 2.5rem;
 }
@@ -71,9 +71,16 @@ body{
     flex-direction: column;
     gap: 10px;
     margin-bottom: 25px;
-}
+}  
 
 .answer-btn{
+    background-color: #f8f0e5;
+    color: #333;
+    border: 2px solid #eadbc8;
+    border-radius: 10px;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: left;
     
 }
 
