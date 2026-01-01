@@ -74,4 +74,21 @@ let answersDisabled = false;
 totalQuestionsSpan.textContent = quizQuestions.length;
 maxScoreSpan.textContent = quizQuestions.length;
 
+
+// EVENT LISTENERS
+
+startButton.addEventListener("click", startQuiz);
+restartButton.addEventListener("click", restartQuiz);
+
+function startQuiz() {
+    console.log("Starting quiz...");
+ 
+}
+function restartQuiz() {
+    console.log("Restarting quiz...");
+ 
+}
+
+
+
  
