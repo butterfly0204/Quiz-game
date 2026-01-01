@@ -81,7 +81,8 @@ startButton.addEventListener("click", startQuiz);
 restartButton.addEventListener("click", restartQuiz);
 
 function startQuiz() {
-    console.log("Starting quiz...");
+   // reset vars
+   currentQuestionIndex =
  
 }
 function restartQuiz() {
