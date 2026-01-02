@@ -62,7 +62,7 @@ const quizQuestions = [
             { text: "Heart", correct: true },
             { text: "Lungs", correct: false }
         ]
-    }, 
+    }
    
 ];
 
@@ -87,7 +87,24 @@ function startQuiz() {
 
    startScreen.classList.remove("active");
    quizScreen.classList.add("active");
+
+   showQuestion()
  
+}
+
+function showQuestion() {
+
+    //reset state 
+    answersDisabled = false;
+
+    const currentQuestion = quizQuestions[currentQuestionIndex];
+
+    currentQuestionSpan.textContent = currentQuestionIndex + 1;
+
+    const progressPercent = (currentQuestionIndex / quizQuestions.length) * 100;
+
+
+
 }
 
 
