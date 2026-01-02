@@ -1,5 +1,5 @@
 // DOM ELEMENTS
-const startScreen = document.getElementById('start-screen');
+const startScreen = document.getElementById("start-screen");
 const quizScreen = document.getElementById("quiz-screen");
 const resultScreen = document.getElementById("result-screen");
 const startButton = document.getElementById("start-btn");
@@ -7,7 +7,7 @@ const questionText = document.getElementById("question-text");
 const answerContainer = document.getElementById("answer-container");
 const currentQuestionSpan = document.getElementById("current-question");
 const totalQuestionsSpan = document.getElementById("total-questions");
-const scoreSpan = document.getElementById("score");
+const scoreSpan = document.getElementById("Score");
 const finalScoreSpan = document.getElementById("final-score");
 const maxScoreSpan = document.getElementById("max-score");
 const resultMessage = document.getElementById("result-message");
@@ -77,14 +77,20 @@ maxScoreSpan.textContent = quizQuestions.length;
 
 // EVENT LISTENERS
 
-startButton.addEventListener("click", startQuiz);
+startButton.addEventListener("click", startQuiz); 
 restartButton.addEventListener("click", restartQuiz);
 
 function startQuiz() {
    // reset vars
-   currentQuestionIndex =
+  currentQuestionIndex = 0
+   scoreSpan.textContent = 0
+
+   startScreen.classList.remove("active");
+   quizScreen.classList.add("active");
  
 }
+
+
 function restartQuiz() {
     console.log("Restarting quiz...");
  
