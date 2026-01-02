@@ -4,7 +4,7 @@ const quizScreen = document.getElementById("quiz-screen");
 const resultScreen = document.getElementById("result-screen");
 const startButton = document.getElementById("start-btn");
 const questionText = document.getElementById("question-text");
-const answerContainer = document.getElementById("answer-container");
+const answerContainer = document.getElementById("answers-container");
 const currentQuestionSpan = document.getElementById("current-question");
 const totalQuestionsSpan = document.getElementById("total-questions");
 const scoreSpan = document.getElementById("Score");
@@ -62,13 +62,13 @@ const quizQuestions = [
             { text: "Heart", correct: true },
             { text: "Lungs", correct: false }
         ]
-    }
+    },
    
 ];
 
 //QUIZ STATE VARS
 let currentQuestionIndex = 0;
-let  score = 0
+let  score = 0;
 let answersDisabled = false;
 
 totalQuestionsSpan.textContent = quizQuestions.length;
@@ -88,7 +88,9 @@ function startQuiz() {
    startScreen.classList.remove("active");
    quizScreen.classList.add("active");
 
-   showQuestion()
+    showQuestion();
+
+   
  
 }
 
@@ -101,12 +103,15 @@ function showQuestion() {
 
     currentQuestionSpan.textContent = currentQuestionIndex + 1;
 
-    const progressPercent = (currentQuestionIndex / quizQuestions.length) * 100;
+    const progressPercent = ((currentQuestionIndex + 1 ) / quizQuestions.length) * 100;
+    progressBar.style.width = progressPercent + "%";
+
+    questionText.textContent = currentQuestion.question;
 
 
 
 }
-
+ 
 
 function restartQuiz() {
     console.log("Restarting quiz...");
