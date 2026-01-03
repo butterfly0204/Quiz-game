@@ -115,7 +115,19 @@ function showQuestion() {
         button.textContent = answer.text;
         button.classList.add("answer-btn"); 
         button.dataset.correct = answer.correct;
-    })
+
+
+        button.addEventListener("click", selectAnswer);
+
+        answersContainer.appendChild(button);
+    });
+
+    function selectAnswer(event) {
+        if(answersDisabled) return;
+
+    answersDisabled = true;
+
+    }
 
 
 
