@@ -4,10 +4,10 @@ const quizScreen = document.getElementById("quiz-screen");
 const resultScreen = document.getElementById("result-screen");
 const startButton = document.getElementById("start-btn");
 const questionText = document.getElementById("question-text");
-const answerContainer = document.getElementById("answers-container");
+const answersContainer = document.getElementById("answers-container");
 const currentQuestionSpan = document.getElementById("current-question");
 const totalQuestionsSpan = document.getElementById("total-questions");
-const scoreSpan = document.getElementById("Score");
+const scoreSpan = document.getElementById("score");
 const finalScoreSpan = document.getElementById("final-score");
 const maxScoreSpan = document.getElementById("max-score");
 const resultMessage = document.getElementById("result-message");
@@ -24,7 +24,7 @@ const quizQuestions = [
             { text: "Madrid", correct: false },
             { text: "Paris", correct: true },
             { text: "Rome", correct: false }
-        ]
+        ],
     },
     {
         question: "What is the largest planet in our solar system?",
@@ -33,7 +33,7 @@ const quizQuestions = [
             { text: "Jupiter", correct: true },
             { text: "Saturn", correct: false },
             { text: "Mars", correct: false }
-        ]
+        ],
     },
     {
         question: "Who wrote 'To Kill a Mockingbird'?",
@@ -42,7 +42,7 @@ const quizQuestions = [
             { text: "Mark Twain", correct: false },
             { text: "F. Scott Fitzgerald", correct: false },
             { text: "Ernest Hemingway", correct: false }
-        ]
+        ],
     },
     {
         question: "What is the chemical symbol for gold?",
@@ -51,7 +51,7 @@ const quizQuestions = [
             { text: "Ag", correct: false },
             { text: "Gd", correct: false },
             { text: "Go", correct: false }
-        ]
+        ],
     },
 
     {
@@ -61,7 +61,7 @@ const quizQuestions = [
             { text: "Brain", correct: false },
             { text: "Heart", correct: true },
             { text: "Lungs", correct: false }
-        ]
+        ],
     },
    
 ];
@@ -107,6 +107,15 @@ function showQuestion() {
     progressBar.style.width = progressPercent + "%";
 
     questionText.textContent = currentQuestion.question;
+
+    answersContainer.innerHTML = "";
+
+    currentQuestion.answers.forEach(answer => {
+        const button = document.createElement("button");
+        button.textContent = answer.text;
+        button.classList.add("answer-btn"); 
+        button.dataset.correct = answer.correct;
+    })
 
 
 
