@@ -67,7 +67,7 @@ const quizQuestions = [
 ];
 
 //QUIZ STATE VARS
-let currentQuestionIndex = 0;
+let currentQuestionIndex = 0; 
 let  score = 0;
 let answersDisabled = false;
 
@@ -114,6 +114,8 @@ function showQuestion() {
         const button = document.createElement("button");
         button.textContent = answer.text;
         button.classList.add("answer-btn"); 
+
+        //dataset allows you to store custom data
         button.dataset.correct = answer.correct;
 
 
@@ -123,15 +125,45 @@ function showQuestion() {
     });
 
     function selectAnswer(event) {
+       // optimization check
         if(answersDisabled) return;
 
     answersDisabled = true;
 
+
+    const selectedButton = event.target;
+    const isCorrect = selectedButton.dataset.correct === "true";
+
+    Array.from(answersContainer.children).forEach((button) => {
+        if(button.dataset.correct === "true") {
+            button.classList.add("correct");        
+        } else {
+            button.classList.add("incorrect");
+        }   
+    });
+
+    if(isCorrect) {
+        score++;
+        scoreSpan.textContent = score;
     }
+    setTimeout(() => {  
+        currentQuestionIndex++;
+        if(currentQuestionIndex < quizQuestions.length) {
+            showQuestion();
+        } else {
+            showResults();
+        }
 
-
+    }, 1000);
 
 }
+    
+
+}
+
+
+
+
  
 
 function restartQuiz() {
