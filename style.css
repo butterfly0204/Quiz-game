@@ -8,7 +8,7 @@
 body{
     background: #f5efe6;
     display: flex;
-    justify-content: cen ter;
+    justify-content:center;
     align-items: center;
     min-height: 100vh;
     font-family: 'Arial', sans-serif;
@@ -19,7 +19,7 @@ body{
 .container{
     background: white;
     border-radius: 1rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     width: 100%;
     max-width: 600px;
     overflow: hidden;
@@ -158,7 +158,7 @@ button{
 }
 
 button:hover{
-    background-color: #8d2f07;
+    background-color: #d45b28;
 }
 
 @media (max-width:500px) {
