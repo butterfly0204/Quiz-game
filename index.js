@@ -66,7 +66,7 @@ const quizQuestions = [
    
 ];
 
-//QUIZ STATE VARS
+//QUIZ STATE VARSS
 let currentQuestionIndex = 0; 
 let  score = 0;
 let answersDisabled = false;
