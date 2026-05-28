@@ -7,7 +7,7 @@
 /* body*/
 body{
     background: #f5efe6;
-    display: flex;
+    display: flex; 
     justify-content:center;
     align-items: center;
     min-height: 100vh;
@@ -62,7 +62,7 @@ body{
     color: #333;
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    line-height: 1.4;
+    line-height: 1.4; 
 
 }
 
@@ -110,7 +110,7 @@ body{
     background-color: #f8f0e5;
     border-radius: 5px;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-top: 20px;
 
 }
 /* THe one on top the progress bar*/
@@ -122,10 +122,10 @@ body{
 }
 
 /* Result screen*/
-#result-screen{
+#result-screen h1{
     color: #e86a33;
     margin-bottom: 30px;
-}
+} 
 
 .result-info{
     background-color: #f8f0e5;
@@ -160,6 +160,9 @@ button{
 button:hover{
     background-color: #d45b28;
 }
+
+
+ 
 
 @media (max-width:500px) {
     .screen{

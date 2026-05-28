@@ -16,61 +16,114 @@ const progressBar = document.getElementById("progress");
 
 
 // QUIZ DATA
-const quizQuestions = [
-    {
-        question: "What is the capital of France?",
-        answers: [
-            { text: "Berlin", correct: false }, 
-            { text: "Madrid", correct: false },
-            { text: "Paris", correct: true },
-            { text: "Rome", correct: false }
-        ],
-    },
-    {
-        question: "What is the largest planet in our solar system?",
-        answers: [
-            { text: "Earth", correct: false },
-            { text: "Jupiter", correct: true },
-            { text: "Saturn", correct: false },
-            { text: "Mars", correct: false }
-        ],
-    },
-    {
-        question: "Who wrote 'To Kill a Mockingbird'?",
-        answers: [
-            { text: "Harper Lee", correct: true },
-            { text: "Mark Twain", correct: false },
-            { text: "F. Scott Fitzgerald", correct: false },
-            { text: "Ernest Hemingway", correct: false }
-        ],
-    },
-    {
-        question: "What is the chemical symbol for gold?",
-        answers: [
-            { text: "Au", correct: true },  
-            { text: "Ag", correct: false },
-            { text: "Gd", correct: false },
-            { text: "Go", correct: false }
-        ],
-    },
+const  quizQuestions = [
+ {
+    question: "what is prayer?",
+    answers: [
+        {text:"sleeping",correct:false},
+        {text:"talking to God",correct:true},
+        {text:"Playing Games",correct:false},
+        {text:"Reading Only",correct:false},
+    ],
+},
+{
+    question: "Who taught the disciples how to pray?",
+    answers: [
+        {text:"Moses",correct:false},
+        {text:"Paul",correct:false},
+        {text:"Jesus",correct:true},
+        {text:"David",correct:false},
+    ]
+ },
 
-    {
-        question: "Which organ in the human body is responsible for pumping blood?",
-        answers: [
-            { text: "Liver", correct: false },      
-            { text: "Brain", correct: false },
-            { text: "Heart", correct: true },
-            { text: "Lungs", correct: false }
-        ],
-    },
-   
-];
+ {
+ question: "What does forgiveness mean?",
+ answers:[
+   {text:"fighting Back", correct:false},
+   {text:"Forgetting school work", correct:false},
+   {text:"Letting go of anger", correct:true},
+   {text:"Keeping anger", correct:false},
+]
+},
+
+{
+  question: "Who was swallowed by a big fish?",
+  answers: [
+    { text: "David", correct: false },
+    { text: "Jonah", correct: true },
+    { text: "Peter", correct: false },
+    { text: "Paul", correct: false }
+  ]
+},
+
+{
+  question: "What should we do to others?",
+  answers: [
+    { text: "Fight them", correct: false },
+    { text: "Love and help them", correct: true },
+    { text: "Ignore them", correct: false },
+    { text: "Mock them", correct: false }
+  ]
+},
+
+{
+  question: "Who built the ark?",
+  answers: [
+    { text: "Moses", correct: false },
+    { text: "Abraham", correct: false },
+    { text: "Noah", correct: true },
+    { text: "Joseph", correct: false }
+  ]
+},
+
+{
+  question: "What does forgiveness mean?",
+  answers: [
+    { text: "Keeping anger", correct: false },
+    { text: "Fighting back", correct: false },
+    { text: "Letting go of anger", correct: true },
+    { text: "Shouting at people", correct: false }
+  ]
+},
+
+{
+  question: "Who protected Daniel in the lions’ den?",
+  answers: [
+    { text: "The king", correct: false },
+    { text: "God", correct: true },
+    { text: "Soldiers", correct: false },
+    { text: "His friends", correct: false }
+  ]
+},
+
+{
+  question: "What should children do to their parents?",
+  answers: [
+    { text: "Ignore them", correct: false },
+    { text: "Obey them", correct: true },
+    { text: "Fight them", correct: false },
+    { text: "Lie to them", correct: false }
+  ]
+},
+{
+    question: "who led the Isrealite out of Egypt?",
+    answers: [
+        {text:"David", correct:false},
+        {text:"Moses", correct:true},
+        {text:"Joseph", correct:false},
+        {text:"Samuel", correct:false}
+    ]
+}
+
+    
+
+]
 
 //QUIZ STATE VARSS
 let currentQuestionIndex = 0; 
 let  score = 0;
 let answersDisabled = false;
-
+ 
 totalQuestionsSpan.textContent = quizQuestions.length;
 maxScoreSpan.textContent = quizQuestions.length;
 
