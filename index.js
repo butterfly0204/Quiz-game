@@ -29,7 +29,7 @@ const  quizQuestions = [
 {
     question: "Who taught the disciples how to pray?",
     answers: [
-        {text:"Moses",correct:false},
+        {text:"Moses",correct:false}, 
         {text:"Paul",correct:false},
         {text:"Jesus",correct:true},
         {text:"David",correct:false},
